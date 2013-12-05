@@ -17,12 +17,33 @@ Install and run suggestion
 
 3- copy the generated war file in the jetty webapps folder
 
+4- Create a config File
+
 4- run jetty
 
 When jetty is running you can test the Manager by navigating on your browser to the port where jetty is serving the servlet (usually localhost:8080). The following message should appear:
  
   The SEC-Protocol Manager is running! Registered Protocols [protocols registered in the Manager]
+  
+Configuration File
+-------------------
+
+The SEC-Manager expects a config file to exist inside a folder named "configFiles". This folder must be placed on the folder outside of where the Manager is running. For example, on a jetty configuration, it must be placed next to the jetty folder. 
+
+**NOTE** The relative path can be modified in the ProtocolManager.java file.
+
+The config file inside the "configFiles" folder must be named "manager.config" and must follow this structure:
+
+	#ProtocolManager configuration
+	pingPort = 4444
+	pingFrequency = 10000
+
+Where:
+
+ -**pingPort** is the port where the Manager will wait for Adapters registration information periodically.
  
+ -**pingFrequency** is the time, in milliseconds, that the Manager will wait for a ping from the registered Adapters before declaring an adapter idle.
+
 How it Works
 -------
 -------
@@ -33,5 +54,5 @@ When it receives a GET it looks into a "registered Adapters" list and returns a 
 When the Manager receives a POST it opens the package and retrieves the name of the intended destination Adapter. It then looks for this Adapter in the "registered Adapters" list and gets all the information about the Adapter's location, availability and communication port. The manager then creates a thread to forwards the information to the Adapter as raw data and wait for a response to send back.
 
 The manager is always listening to the "registration port". This port is a configurable port that listens to pings from the Adapters. When it receives a call it will check if the adapter is already registered and it will registered if no previous registrations were found. If the Manager does not receive a ping in a configurable amount of time, the manager will consider that the adapter is idle or not responding, it will log the problem and flag the Adapter as "idle".
- 
 
+ 
