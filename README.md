@@ -4,22 +4,22 @@ The SEC Protocol Manager is part of the "Secure Enterprise Connector" (SEC) buil
 The "SEC Protocol Manager" manages data received from the "Data Connector Agent" and determines which adapter it must forward the information too. The "SEC Protocol Manager" also keeps a registry of all adapters and regularly checks the health of each adapter to ensure it is running smoothly.
 
 
-As  02/10/2013, the SEC Protocol Manager has only bean tested with jetty 7 standalone. It's basically a java servlet that runs with the help of the SEC-SDK. The pom.xml dependency for the sdk ussualy point to the current development sdk. If you want a more stable version you should download the latest version of the SEC-SDK and import it in your project. The latest version of the SEC-SDK that can be found in [here](https://github.com/MalcolmHaslam/RunMyProcess-SEC-SDK).
+As  02/10/2013, the SEC Protocol Manager has only bean tested with jetty 7 standalone. It's basically a java servlet that runs with the help of the SEC-SDK. The pom.xml dependency for the sdk usually point to the current development sdk. If you want a more stable version you should download the latest version of the SEC-SDK and import it in your project. The latest version of the SEC-SDK that can be found in [here](https://github.com/MalcolmHaslam/RunMyProcess-SEC-SDK).
 
 
 Install and run suggestion
 ---------------------------
 ---------------------------
 
-1- Download jetty standalone (tested on jetty 7.6.11)
+1. Download **[jetty](http://www.eclipse.org/jetty/)** standalone (tested on jetty 7.6.11)
 
-2- Download the project and run mvn clean install to generate the war file with all dependencies
+2. Download the **sec-manager** project and run mvn clean install to generate the war file with all dependencies
 
-3- copy the generated war file in the jetty webapps folder
+3. copy the generated war file in the jetty webapps folder
 
-4- Create a config File
+4. Create the configuration file (see bellow)
 
-4- run jetty
+5. run jetty
 
 When jetty is running you can test the Manager by navigating on your browser to the port where jetty is serving the servlet (usually localhost:8080). The following message should appear:
  
