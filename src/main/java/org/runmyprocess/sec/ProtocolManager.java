@@ -57,8 +57,7 @@ public class ProtocolManager extends HttpServlet {
      * @throws Exception 
      */
     public ProtocolManager() throws Exception {
-    	Config config = new Config("./../configFiles/manager.config",true);
-    	
+    	Config config = new Config("."+File.separator+".."+File.separator+"configFiles"+File.separator+"manager.config",true);
     	try {
             new ListenerThread(registrationHandler, Integer.parseInt(config.getProperty("pingPort"))).start();//Listen to port for new connections
         } catch (Exception ex) {
