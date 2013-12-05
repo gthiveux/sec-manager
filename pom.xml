@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.runmyprocess.sec</groupId>
 	<artifactId>rmp-sec-protocol-manager</artifactId>
-	<version>develop</version>
+	<version>1.0</version>
 	<name>RunMyProcess SEC Protocol Manager Application</name>
     <packaging>war</packaging>
 
