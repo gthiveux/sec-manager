@@ -11,7 +11,7 @@ Install and run suggestion
 ---------------------------
 ---------------------------
 
-1- Download jetty 7 standalone
+1- Download jetty standalone (tested on jetty 7.6.11)
 
 2- Download the project and run mvn clean install to generate the war file with all dependencies
 
