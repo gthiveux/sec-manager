@@ -11,15 +11,17 @@ Install and run suggestion
 ---------------------------
 ---------------------------
 
-1. Download **[jetty](http://www.eclipse.org/jetty/)** standalone (tested on jetty 7.6.11)
+1. Make sure you have [java](http://www.oracle.com/technetwork/java/index.html) and [maven](http://maven.apache.org/) installed on your machine 
+2. Download **[jetty](http://www.eclipse.org/jetty/)** standalone (tested on jetty 7.6.11)
+3. Download the **sec-manager** project and run mvn clean install to generate the war file with all dependencies
 
-2. Download the **sec-manager** project and run mvn clean install to generate the war file with all dependencies
+run mvn clean install
 
-3. copy the generated war file in the jetty webapps folder
-
-4. Create the configuration file (see bellow)
-
-5. run jetty
+	mvn clean install
+	
+4. copy the generated war file in the jetty webapps folder
+5. Create the **Configuration File** (see bellow)
+6. run jetty
 
 When jetty is running you can test the Manager by navigating on your browser to the port where jetty is serving the servlet (usually localhost:8080). The following message should appear:
  
