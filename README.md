@@ -10,7 +10,6 @@ As of 02/10/2013, the SEC Protocol Manager has only been tested with Jetty 7 sta
 
 Install and run suggestion
 ---------------------------
----------------------------
 
 1. Make sure you have [Java](http://www.oracle.com/technetwork/java/index.html) and [Maven](http://maven.apache.org/) installed on your machine. 
 2. Download **[Jetty](http://www.eclipse.org/jetty/)** standalone (tested on Jetty 7.6.11).
@@ -31,7 +30,6 @@ When Jetty is running you can test the Manager by navigating on your browser to 
   
 Configuration file
 -------------------
--------------------
 
 The SEC-Manager expects a config file to exist inside a folder named "configFiles". This folder must be placed on the folder outside of where the Manager is running. For example, on a Jetty configuration, it must be placed next to the Jetty folder. 
 
@@ -51,7 +49,6 @@ Where :
 
 
 How it Works
--------------
 -------------
 
 As mentioned before, the Manager is a JAVA Servlet that listens to a port for GETs and POSTs.
